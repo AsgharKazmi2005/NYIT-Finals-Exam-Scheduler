@@ -1,0 +1,39 @@
+#root {
+  /* max-width: 1280px; */
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Search bar styling */
+.search-bar {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid wheat;
+}
+
+/* Table row styles */
+.table-row:nth-child(even) {
+  background-color: #000435; /* Dark Blue */
+  color: #ffffff; /* White text for readability */
+}
+
+.table-row:nth-child(odd) {
+  background-color: #00007e70; /* Dark Yellow */
+  color: #ffffff; /* Black text for readability */
+}
+
+/* Header and cell text alignment */
+th,
+td {
+  text-align: left;
+  padding: 3px;
+}
