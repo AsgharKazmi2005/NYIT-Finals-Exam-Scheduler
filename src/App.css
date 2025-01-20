@@ -34,6 +34,6 @@
 /* Header and cell text alignment */
 th,
 td {
-  text-align: left;
+  text-align: center;
   padding: 3px;
 }
