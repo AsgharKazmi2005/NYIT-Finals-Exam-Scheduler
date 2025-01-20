@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gapi-script": "^1.2.0",
+    "googleapis": "^144.0.0",
     "react": "^18.3.1",
     "react-datepicker": "^7.6.0",
     "react-dom": "^18.3.1",
     "react-google-calendar-api": "^2.3.0",
+    "react-google-login": "^5.2.2",
     "react-table": "^7.8.0"
   },
   "devDependencies": {

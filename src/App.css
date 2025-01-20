@@ -37,3 +37,7 @@ td {
   text-align: center;
   padding: 3px;
 }
+
+.google-calendar {
+  border: 1px solid white;
+}
