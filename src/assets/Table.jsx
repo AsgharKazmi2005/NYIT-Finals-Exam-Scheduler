@@ -11,6 +11,15 @@ const Table = () => {
   const CLIENT_ID = import.meta.env.VITE_GAPI_CLIENT_ID;
   const API_KEY = import.meta.env.VITE_GAPI_API_KEY;
 
+  if (!CLIENT_ID) {
+    console.error(
+      "CLIENT_ID is not defined. Check your environment variables."
+    );
+  }
+  if (!API_KEY) {
+    console.error("API_KEY is not defined. Check your environment variables.");
+  }
+
   useEffect(() => {
     // Load GAPI client
     gapi.load("client", async () => {
