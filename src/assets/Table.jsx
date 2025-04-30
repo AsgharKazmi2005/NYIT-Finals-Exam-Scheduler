@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { getCachedData, fetchSampleData } from "../cacheUtils";
 
 const Table = () => {
@@ -28,12 +28,23 @@ const Table = () => {
     );
   };
 
-  const filteredData = data.filter(
-    (item) =>
-      (item.Instructor?.toLowerCase() || "").includes(filter.toLowerCase()) ||
-      (item.ClassCode?.toLowerCase() || "").includes(filter.toLowerCase()) ||
-      (item.CourseTitle?.toLowerCase() || "").includes(filter.toLowerCase())
-  );
+  const filteredData = useMemo(() => {
+    if (!Array.isArray(data) || data.length === 0) return [];
+
+    const safeFilter = (filter || "").toLowerCase();
+
+    return data.filter((item) => {
+      const instructor = (item.Instructor ?? "").toString().toLowerCase();
+      const classCode = (item.ClassCode ?? "").toString().toLowerCase();
+      const courseTitle = (item.CourseTitle ?? "").toString().toLowerCase();
+
+      return (
+        instructor.includes(safeFilter) ||
+        classCode.includes(safeFilter) ||
+        courseTitle.includes(safeFilter)
+      );
+    });
+  }, [data, filter]);
 
   const sortedData = [
     ...checkedItems,
