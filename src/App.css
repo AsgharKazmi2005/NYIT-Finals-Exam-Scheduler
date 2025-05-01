@@ -41,3 +41,12 @@ td {
 .google-calendar {
   border: 1px solid white;
 }
+
+th {
+  user-select: none;
+}
+
+th:hover {
+  background-color: #1d1d1d;
+}
+
