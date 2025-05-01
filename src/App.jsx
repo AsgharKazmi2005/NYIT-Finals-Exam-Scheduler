@@ -5,7 +5,7 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <h1>NYIT Final Exams Schedule - NYC SPRING 2025</h1>
+      <h1 className="title">NYIT Final Exams Schedule - NYC SPRING 2025</h1>
       <Table />
     </div>
   );

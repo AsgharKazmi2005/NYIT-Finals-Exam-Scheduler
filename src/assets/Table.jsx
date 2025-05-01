@@ -5,7 +5,7 @@ const Table = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
   const [checkedItems, setCheckedItems] = useState([]);
-  const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
+  const [sortConfigList, setSortConfigList] = useState([]);
   const [campusFilters, setCampusFilters] = useState({
     "New York City": true,
     "Long Island": true,
@@ -41,16 +41,35 @@ const Table = () => {
   };
 
   const requestSort = (key) => {
-    let direction = "asc";
-    if (sortConfig.key === key && sortConfig.direction === "asc") {
-      direction = "desc";
-    }
-    setSortConfig({ key, direction });
+    setSortConfigList((prevList) => {
+      const existingIndex = prevList.findIndex((entry) => entry.key === key);
+
+      if (existingIndex !== -1) {
+        const current = prevList[existingIndex];
+        const newDirection = current.direction === "asc" ? "desc" : "asc";
+        const updatedList = [...prevList];
+        updatedList[existingIndex] = { ...current, direction: newDirection };
+        return updatedList;
+      } else {
+        return [...prevList, { key, direction: "asc" }];
+      }
+    });
+  };
+
+  const resetFilters = () => {
+    setFilter("");
+    setSortConfigList([]);
+    setCheckedItems([]);
+    setCampusFilters({
+      "New York City": true,
+      "Long Island": true,
+    });
   };
 
   const getSortArrow = (key) => {
-    if (sortConfig.key !== key) return "⇅";
-    return sortConfig.direction === "asc" ? "⬆️" : "⬇️";
+    const config = sortConfigList.find((c) => c.key === key);
+    if (!config) return "⇅";
+    return config.direction === "asc" ? "⬆️" : "⬇️";
   };
 
   const filteredData = useMemo(() => {
@@ -78,30 +97,32 @@ const Table = () => {
   const sortedFilteredData = useMemo(() => {
     const sortable = [...filteredData];
 
-    if (sortConfig.key) {
+    if (sortConfigList.length > 0) {
       sortable.sort((a, b) => {
-        let aVal = a[sortConfig.key] ?? "";
-        let bVal = b[sortConfig.key] ?? "";
+        for (const { key, direction } of sortConfigList) {
+          let aVal = a[key] ?? "";
+          let bVal = b[key] ?? "";
 
-        if (sortConfig.key.toLowerCase().includes("time")) {
-          aVal = new Date(`1970-01-01T${aVal}`);
-          bVal = new Date(`1970-01-01T${bVal}`);
-        } else if (sortConfig.key.toLowerCase().includes("date")) {
-          aVal = new Date(aVal);
-          bVal = new Date(bVal);
-        } else {
-          aVal = aVal.toString().toLowerCase();
-          bVal = bVal.toString().toLowerCase();
+          if (key.toLowerCase().includes("time")) {
+            aVal = new Date(`1970-01-01T${aVal}`);
+            bVal = new Date(`1970-01-01T${bVal}`);
+          } else if (key.toLowerCase().includes("date")) {
+            aVal = new Date(aVal);
+            bVal = new Date(bVal);
+          } else {
+            aVal = aVal.toString().toLowerCase();
+            bVal = bVal.toString().toLowerCase();
+          }
+
+          if (aVal < bVal) return direction === "asc" ? -1 : 1;
+          if (aVal > bVal) return direction === "asc" ? 1 : -1;
         }
-
-        if (aVal < bVal) return sortConfig.direction === "asc" ? -1 : 1;
-        if (aVal > bVal) return sortConfig.direction === "asc" ? 1 : -1;
         return 0;
       });
     }
 
     return sortable;
-  }, [filteredData, sortConfig]);
+  }, [filteredData, sortConfigList]);
 
   const sortedData = [
     ...checkedItems,
@@ -110,6 +131,9 @@ const Table = () => {
 
   return (
     <div style={{ margin: "0 auto" }}>
+      <p style={{ fontSize: '0.8rem', marginBottom: '1rem', color: '#ccc', textEmphasisStyle: 'italic', borderTop: '0px'}}>
+        <em>Developed by NYIT ACM, Asghar Kazmi</em>
+      </p>
       <input
         type="text"
         placeholder="Search by Instructor, Class, or Title"
@@ -126,7 +150,7 @@ const Table = () => {
             onChange={() =>
               setCampusFilters((prev) => ({
                 ...prev,
-                "New York City": !prev["New York City"],
+                "New York City": !prev["New York City"], 
               }))
             }
           />
@@ -146,6 +170,8 @@ const Table = () => {
           />
           Long Island
         </label>
+        &nbsp;&nbsp;
+        <button onClick={resetFilters}>Reset All Filters</button>
       </div>
 
       <p>
@@ -156,46 +182,25 @@ const Table = () => {
         <thead>
           <tr>
             <th>Check</th>
-            <th
-              onClick={() => requestSort("ClassCode")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("ClassCode")} style={{ cursor: "pointer" }}>
               Class Code {getSortArrow("ClassCode")}
             </th>
-            <th
-              onClick={() => requestSort("CourseTitle")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("CourseTitle")} style={{ cursor: "pointer" }}>
               Course Title {getSortArrow("CourseTitle")}
             </th>
-            <th
-              onClick={() => requestSort("Instructor")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("Instructor")} style={{ cursor: "pointer" }}>
               Instructor {getSortArrow("Instructor")}
             </th>
-            <th
-              onClick={() => requestSort("Day")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("Day")} style={{ cursor: "pointer" }}>
               Day {getSortArrow("Day")}
             </th>
-            <th
-              onClick={() => requestSort("Date")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("Date")} style={{ cursor: "pointer" }}>
               Date {getSortArrow("Date")}
             </th>
-            <th
-              onClick={() => requestSort("StartTime")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("StartTime")} style={{ cursor: "pointer" }}>
               Start Time {getSortArrow("StartTime")}
             </th>
-            <th
-              onClick={() => requestSort("EndTime")}
-              style={{ cursor: "pointer" }}
-            >
+            <th onClick={() => requestSort("EndTime")} style={{ cursor: "pointer" }}>
               End Time {getSortArrow("EndTime")}
             </th>
             <th>Room</th>

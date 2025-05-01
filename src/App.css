@@ -50,3 +50,23 @@ th:hover {
   background-color: #1d1d1d;
 }
 
+.reset {
+  background-color: #010230;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+} 
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  min-width: 700px; /* or however wide your table must be */
+}
+
+.title {
+  margin-bottom: 0;
+}
