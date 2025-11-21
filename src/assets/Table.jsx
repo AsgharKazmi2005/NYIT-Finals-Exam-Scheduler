@@ -13,6 +13,19 @@ const normalizeRow = (row) => ({
   Campus: row.Campus ?? "",
 });
 
+// Convert "5:00 PM" → minutes since midnight
+const parseTimeToMinutes = (timeStr) => {
+  if (!timeStr) return 0;
+
+  const [time, meridian] = timeStr.split(" ");
+  let [hours, minutes] = time.split(":").map(Number);
+
+  if (meridian === "PM" && hours !== 12) hours += 12;
+  if (meridian === "AM" && hours === 12) hours = 0;
+
+  return hours * 60 + minutes;
+};
+
 const Table = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
@@ -23,14 +36,12 @@ const Table = () => {
     "Long Island": true,
   });
 
-  // Only keep sortable fields present in normalized output
+  // Time is NOT sortable anymore
   const sortableColumns = [
     "ClassCode",
     "Instructor",
     "CourseTitle",
     "Date",
-    "StartTime",
-    "EndTime",
   ];
 
   useEffect(() => {
@@ -50,6 +61,8 @@ const Table = () => {
   };
 
   const requestSort = (key) => {
+    if (!sortableColumns.includes(key)) return; // TIME is unsortable
+
     setSortConfigList((prevList) => {
       const existingIndex = prevList.findIndex((entry) => entry.key === key);
 
@@ -76,12 +89,14 @@ const Table = () => {
   };
 
   const getSortArrow = (key) => {
+    if (!sortableColumns.includes(key)) return ""; // TIME gets NO arrow
+
     const config = sortConfigList.find((c) => c.key === key);
     if (!config) return "⇅";
     return config.direction === "asc" ? "⬆️" : "⬇️";
   };
 
-  // Apply search and campus filters
+  // Filtering logic
   const filteredData = useMemo(() => {
     if (!Array.isArray(data) || data.length === 0) return [];
 
@@ -104,7 +119,7 @@ const Table = () => {
     });
   }, [data, filter, campusFilters]);
 
-  // Sorting logic
+  // Sorting logic (DATE automatically sorts by TIME)
   const sortedFilteredData = useMemo(() => {
     const sortable = [...filteredData];
 
@@ -114,16 +129,29 @@ const Table = () => {
           let aVal = a[key] ?? "";
           let bVal = b[key] ?? "";
 
-          if (key.toLowerCase().includes("time")) {
-            aVal = new Date(`1970-01-01T${aVal}`);
-            bVal = new Date(`1970-01-01T${bVal}`);
-          } else if (key.toLowerCase().includes("date")) {
-            aVal = new Date(aVal);
-            bVal = new Date(bVal);
-          } else {
-            aVal = aVal.toString().toLowerCase();
-            bVal = bVal.toString().toLowerCase();
+          if (key === "Date") {
+            // PRIMARY: Date sorting
+            const aDate = new Date(aVal);
+            const bDate = new Date(bVal);
+            if (aDate < bDate) return direction === "asc" ? -1 : 1;
+            if (aDate > bDate) return direction === "asc" ? 1 : -1;
+
+            // SECONDARY: Start Time sorting
+            const aTime = parseTimeToMinutes(a.StartTime);
+            const bTime = parseTimeToMinutes(b.StartTime);
+            if (aTime < bTime) return direction === "asc" ? -1 : 1;
+            if (aTime > bTime) return direction === "asc" ? 1 : -1;
+
+            // TERTIARY: End Time sorting if needed
+            const aEnd = parseTimeToMinutes(a.EndTime);
+            const bEnd = parseTimeToMinutes(b.EndTime);
+            if (aEnd < bEnd) return direction === "asc" ? -1 : 1;
+            if (aEnd > bEnd) return direction === "asc" ? 1 : -1;
           }
+
+          // Normal string sorting for Instructor, ClassCode, CourseTitle
+          aVal = aVal.toString().toLowerCase();
+          bVal = bVal.toString().toLowerCase();
 
           if (aVal < bVal) return direction === "asc" ? -1 : 1;
           if (aVal > bVal) return direction === "asc" ? 1 : -1;
@@ -135,7 +163,6 @@ const Table = () => {
     return sortable;
   }, [filteredData, sortConfigList]);
 
-  // Checked rows always stay at the top
   const sortedData = [
     ...checkedItems,
     ...sortedFilteredData.filter((item) => !checkedItems.includes(item)),
@@ -143,14 +170,8 @@ const Table = () => {
 
   return (
     <div style={{ margin: "0 auto" }}>
-      <p
-        style={{
-          fontSize: "0.8rem",
-          marginBottom: "1rem",
-          color: "#ccc",
-        }}
-      >
-        <em>Developed by NYC ACM</em>
+      <p style={{ fontSize: "0.8rem", marginBottom: "1rem", color: "#ccc" }}>
+        <em>Developed by NYIT ACM, Asghar Kazmi</em>
       </p>
 
       <input
@@ -194,31 +215,33 @@ const Table = () => {
       </div>
 
       <p>
-        <em>🔁 Click a column header to sort (only columns with arrows are sortable)</em>
+        <em>🔁 Click a column header to sort (times follow date automatically)</em>
       </p>
 
       <table className="table" border="1">
         <thead>
           <tr>
             <th>Check</th>
+
             <th onClick={() => requestSort("ClassCode")} style={{ cursor: "pointer" }}>
               Class Code {getSortArrow("ClassCode")}
             </th>
+
             <th onClick={() => requestSort("CourseTitle")} style={{ cursor: "pointer" }}>
               Course Title {getSortArrow("CourseTitle")}
             </th>
+
             <th onClick={() => requestSort("Instructor")} style={{ cursor: "pointer" }}>
               Instructor {getSortArrow("Instructor")}
             </th>
+
             <th onClick={() => requestSort("Date")} style={{ cursor: "pointer" }}>
               Date {getSortArrow("Date")}
             </th>
-            <th onClick={() => requestSort("StartTime")} style={{ cursor: "pointer" }}>
-              Start Time {getSortArrow("StartTime")}
-            </th>
-            <th onClick={() => requestSort("EndTime")} style={{ cursor: "pointer" }}>
-              End Time {getSortArrow("EndTime")}
-            </th>
+
+            <th>Start Time</th>
+            <th>End Time</th>
+
             <th>Room</th>
             <th>Campus</th>
           </tr>
@@ -234,6 +257,7 @@ const Table = () => {
                   onChange={() => handleCheck(item)}
                 />
               </td>
+
               <td>{item.ClassCode}</td>
               <td>{item.CourseTitle}</td>
               <td>{item.Instructor}</td>
