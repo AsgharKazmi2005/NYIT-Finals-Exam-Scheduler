@@ -150,7 +150,7 @@ const Table = () => {
           color: "#ccc",
         }}
       >
-        <em>Developed by NYIT ACM, Asghar Kazmi</em>
+        <em>Developed by NYC ACM</em>
       </p>
 
       <input
