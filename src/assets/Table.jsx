@@ -1,6 +1,18 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { getCachedData, fetchSampleData } from "../cacheUtils";
 
+// Convert backend keys → frontend keys
+const normalizeRow = (row) => ({
+  ClassCode: row.Class ?? "",
+  CourseTitle: row.Course_Title ?? "",
+  Instructor: row.Instructor ?? "",
+  Date: row.Date ?? "",
+  StartTime: row.Start_Time ?? "",
+  EndTime: row.End_Time ?? "",
+  Room: row["Building_&_Room"] ?? "",
+  Campus: row.Campus ?? "",
+});
+
 const Table = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
@@ -11,11 +23,11 @@ const Table = () => {
     "Long Island": true,
   });
 
+  // Only keep sortable fields present in normalized output
   const sortableColumns = [
     "ClassCode",
     "Instructor",
     "CourseTitle",
-    "Day",
     "Date",
     "StartTime",
     "EndTime",
@@ -24,12 +36,9 @@ const Table = () => {
   useEffect(() => {
     const loadData = async () => {
       const cachedData = getCachedData();
-      if (cachedData) {
-        setData(cachedData);
-      } else {
-        const fetchedData = await fetchSampleData();
-        setData(fetchedData);
-      }
+      const raw = cachedData ? cachedData : await fetchSampleData();
+      const normalized = raw.map(normalizeRow);
+      setData(normalized);
     };
     loadData();
   }, []);
@@ -72,16 +81,17 @@ const Table = () => {
     return config.direction === "asc" ? "⬆️" : "⬇️";
   };
 
+  // Apply search and campus filters
   const filteredData = useMemo(() => {
     if (!Array.isArray(data) || data.length === 0) return [];
 
     const safeFilter = (filter || "").toLowerCase();
 
     return data.filter((item) => {
-      const instructor = (item.Instructor ?? "").toString().toLowerCase();
-      const classCode = (item.ClassCode ?? "").toString().toLowerCase();
-      const courseTitle = (item.CourseTitle ?? "").toString().toLowerCase();
-      const campus = item.Campus || "";
+      const instructor = (item.Instructor ?? "").toLowerCase();
+      const classCode = (item.ClassCode ?? "").toLowerCase();
+      const courseTitle = (item.CourseTitle ?? "").toLowerCase();
+      const campus = item.Campus ?? "";
 
       const matchesSearch =
         instructor.includes(safeFilter) ||
@@ -94,6 +104,7 @@ const Table = () => {
     });
   }, [data, filter, campusFilters]);
 
+  // Sorting logic
   const sortedFilteredData = useMemo(() => {
     const sortable = [...filteredData];
 
@@ -124,6 +135,7 @@ const Table = () => {
     return sortable;
   }, [filteredData, sortConfigList]);
 
+  // Checked rows always stay at the top
   const sortedData = [
     ...checkedItems,
     ...sortedFilteredData.filter((item) => !checkedItems.includes(item)),
@@ -131,9 +143,16 @@ const Table = () => {
 
   return (
     <div style={{ margin: "0 auto" }}>
-      <p style={{ fontSize: '0.8rem', marginBottom: '1rem', color: '#ccc', textEmphasisStyle: 'italic', borderTop: '0px'}}>
+      <p
+        style={{
+          fontSize: "0.8rem",
+          marginBottom: "1rem",
+          color: "#ccc",
+        }}
+      >
         <em>Developed by NYIT ACM, Asghar Kazmi</em>
       </p>
+
       <input
         type="text"
         placeholder="Search by Instructor, Class, or Title"
@@ -150,7 +169,7 @@ const Table = () => {
             onChange={() =>
               setCampusFilters((prev) => ({
                 ...prev,
-                "New York City": !prev["New York City"], 
+                "New York City": !prev["New York City"],
               }))
             }
           />
@@ -191,9 +210,6 @@ const Table = () => {
             <th onClick={() => requestSort("Instructor")} style={{ cursor: "pointer" }}>
               Instructor {getSortArrow("Instructor")}
             </th>
-            <th onClick={() => requestSort("Day")} style={{ cursor: "pointer" }}>
-              Day {getSortArrow("Day")}
-            </th>
             <th onClick={() => requestSort("Date")} style={{ cursor: "pointer" }}>
               Date {getSortArrow("Date")}
             </th>
@@ -207,6 +223,7 @@ const Table = () => {
             <th>Campus</th>
           </tr>
         </thead>
+
         <tbody>
           {sortedData.map((item, index) => (
             <tr key={index} className="table-row">
@@ -220,7 +237,6 @@ const Table = () => {
               <td>{item.ClassCode}</td>
               <td>{item.CourseTitle}</td>
               <td>{item.Instructor}</td>
-              <td>{item.Day}</td>
               <td>{item.Date}</td>
               <td>{item.StartTime}</td>
               <td>{item.EndTime}</td>
