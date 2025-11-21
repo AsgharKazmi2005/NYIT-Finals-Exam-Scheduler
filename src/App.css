@@ -70,3 +70,59 @@ th:hover {
 .title {
   margin-bottom: 0;
 }
+
+/* ----------- Mobile Optimizations ----------- */
+
+/* Phones: ≤ 600px */
+@media (max-width: 600px) {
+  #root {
+    width: 95%;
+    padding: 1rem;
+    display: flex;
+  }
+
+  .search-bar {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  table.table {
+    font-size: 0.75rem; /* smaller text to fit */
+    min-width: 550px;   /* allow scrolling */
+  }
+
+  th, td {
+    padding: 2px; /* tighter padding on phones */
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  /* Ensure checkboxes do not get squeezed */
+  td input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+}
+
+/* Very small phones: ≤ 400px */
+@media (max-width: 400px) {
+  table.table {
+    font-size: 0.7rem;
+    min-width: 500px;
+  }
+
+  .search-bar {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 1px;
+  }
+
+  #root {
+    padding: 0.5rem;
+    display: flex;
+  }
+}
