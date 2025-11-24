@@ -1,5 +1,9 @@
 import pandas as pd
 import json
+import sys
+
+# Ensure UTF-8 printing on Windows (safe no-op on Mac/Linux)
+sys.stdout.reconfigure(encoding='utf-8')
 
 CSV_PATH = "schedule.csv"
 
@@ -42,7 +46,7 @@ if __name__ == "__main__":
     df = load_clean_csv(CSV_PATH)
     json_data = df_to_json(df)
 
-    with open("output.json", "w") as f:
-        json.dump(json_data, f, indent=4)
+    with open("output.json", "w", encoding="utf-8") as f:
+        json.dump(json_data, f, indent=4, ensure_ascii=False)
 
-    print(f"Extracted {len(json_data)} valid rows → saved to output.json")
+    print(f"Extracted {len(json_data)} valid rows -> saved to output.json")

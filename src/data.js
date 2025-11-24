@@ -7979,7 +7979,7 @@ const data = [
         "Class": "FCWR 101 W03",
         "Course_Title": "Writing I:Found Coll Comp",
         "Instructor": "Love",
-        "Date": "Wednesday, December 17, 2025",
+        "Date": "Monday, December 15, 2025",
         "Start_Time": "8:15 AM",
         "End_Time": "10:15 AM",
         "Building_&_Room": "Harry J. Schure Hall, Rm. 125",
