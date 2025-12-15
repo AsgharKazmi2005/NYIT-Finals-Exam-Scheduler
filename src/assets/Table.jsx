@@ -171,7 +171,7 @@ const Table = () => {
   return (
     <div style={{ margin: "0 auto" }}>
       <p style={{ fontSize: "0.8rem", marginBottom: "1rem", color: "#ccc" }}>
-        <em>Developed by NYIT ACM</em>
+        <em>Developed by NYIT ACM, Updated December 15th</em>
       </p>
 
       <input
