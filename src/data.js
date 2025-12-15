@@ -1291,7 +1291,7 @@ const data = [
         "Class": "ARCH 361 M01",
         "Course_Title": "Arch Hist Sem",
         "Instructor": "Vossoughian",
-        "Date": "Thursday, December 18, 2025",
+        "Date": "Wednesday, December 17, 2025",
         "Start_Time": "12:45 PM",
         "End_Time": "2:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 314",
@@ -1797,10 +1797,10 @@ const data = [
         "Class": "ARCH 661 M01",
         "Course_Title": "Global History of Arch I",
         "Instructor": "Vossoughian",
-        "Date": "Thursday, December 18, 2025",
+        "Date": "Wednesday, December 17, 2025",
         "Start_Time": "8:15 AM",
         "End_Time": "10:15 AM",
-        "Building_&_Room": "Guiliano Global Ctr., Rm. 701",
+        "Building_&_Room": "26 W. 61st St., Rm. 314",
         "Campus": "New York City"
     },
     {
@@ -2801,7 +2801,7 @@ const data = [
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "8:15 AM",
         "End_Time": "10:15 AM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -2823,7 +2823,7 @@ const data = [
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "12:30 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -2900,7 +2900,7 @@ const data = [
         "Date": "Wednesday, December 17, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "12:30 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -3043,7 +3043,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "8:15 AM",
         "End_Time": "10:15 AM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -3648,7 +3648,7 @@ const data = [
         "Date": "Monday, December 15, 2025",
         "Start_Time": "8:15 AM",
         "End_Time": "10:15 AM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -3747,7 +3747,7 @@ const data = [
         "Date": "Wednesday, December 17, 2025",
         "Start_Time": "3:00 PM",
         "End_Time": "5:00 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -3758,7 +3758,7 @@ const data = [
         "Date": "Monday, December 15, 2025",
         "Start_Time": "12:45 PM",
         "End_Time": "2:45 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -4082,6 +4082,17 @@ const data = [
     },
     {
         "Session": "Fall 2025",
+        "Class": "CSCI 185 M01",
+        "Course_Title": "Computer Programming II",
+        "Instructor": "Li",
+        "Date": "Tuesday, December 16, 2025",
+        "Start_Time": "8:15 AM",
+        "End_Time": "10:15 AM",
+        "Building_&_Room": "26 W. 61st St., Rm. 313",
+        "Campus": "New York City"
+    },
+    {
+        "Session": "Fall 2025",
         "Class": "CSCI 185 M05",
         "Course_Title": "Computer Programming II",
         "Instructor": "Akter",
@@ -4346,6 +4357,17 @@ const data = [
     },
     {
         "Session": "Fall 2025",
+        "Class": "CSCI 318 M01",
+        "Course_Title": "Programming Language Concepts",
+        "Instructor": "Li",
+        "Date": "Friday, December 19, 2025",
+        "Start_Time": "10:30 AM",
+        "End_Time": "12:30 PM",
+        "Building_&_Room": "16 W. 61st St., Rm. 721",
+        "Campus": "New York City"
+    },
+    {
+        "Session": "Fall 2025",
         "Class": "CSCI 318 W01",
         "Course_Title": "Programming Language Concepts",
         "Instructor": "Zhang",
@@ -4385,7 +4407,7 @@ const data = [
         "Date": "Monday, December 15, 2025",
         "Start_Time": "5:45 PM",
         "End_Time": "8:25 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -5023,7 +5045,7 @@ const data = [
         "Date": "Monday, December 15, 2025",
         "Start_Time": "5:45 PM",
         "End_Time": "8:25 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -5318,7 +5340,7 @@ const data = [
         "Course_Title": "Programming Techniques I",
         "Instructor": "Meyers",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "3:00 PM",
+        "Start_Time": "1:00 PM",
         "End_Time": "5:00 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 606",
         "Campus": "New York City"
@@ -5395,7 +5417,7 @@ const data = [
         "Course_Title": "Applied Comp Analysis II",
         "Instructor": "Meyers",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "10:30 AM",
+        "Start_Time": "9:00 AM",
         "End_Time": "12:30 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 606",
         "Campus": "New York City"
@@ -7638,7 +7660,7 @@ const data = [
         "Class": "ETEC 310 W01",
         "Course_Title": "Communication Circuits",
         "Instructor": "Ahmed",
-        "Date": "Thursday, December 18, 2025",
+        "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "12:30 PM",
         "Building_&_Room": "Harry J. Schure Hall, Rm. CLC3",
@@ -7916,7 +7938,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "12:30 PM",
-        "Building_&_Room": "26 W. 61st St., Rm. 207",
+        "Building_&_Room": "26 W. 61st St., Rm. 312",
         "Campus": "New York City"
     },
     {
@@ -7949,7 +7971,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "12:30 PM",
-        "Building_&_Room": "Guiliano Global Ctr., Rm. 701",
+        "Building_&_Room": "26 W. 61st St., Rm. 312",
         "Campus": "New York City"
     },
     {
@@ -9434,7 +9456,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 307",
         "Campus": "Long Island"
     },
     {
@@ -9456,7 +9478,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 303",
         "Campus": "Long Island"
     },
     {
@@ -9465,8 +9487,8 @@ const data = [
         "Course_Title": "Fundamentals of Precalculus I",
         "Instructor": "Leon",
         "Date": "Monday, December 15, 2025",
-        "Start_Time": "12:15 PM",
-        "End_Time": "2:45 PM",
+        "Start_Time": "12:00 PM",
+        "End_Time": "3:00 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 409",
         "Campus": "New York City"
     },
@@ -9477,7 +9499,7 @@ const data = [
         "Instructor": "Yang",
         "Date": "Wednesday, December 17, 2025",
         "Start_Time": "3:00 PM",
-        "End_Time": "5:30 PM",
+        "End_Time": "6:00 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 401",
         "Campus": "New York City"
     },
@@ -9488,7 +9510,7 @@ const data = [
         "Instructor": "Gopaul",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "12:45 PM",
-        "End_Time": "3:15 PM",
+        "End_Time": "3:45 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 401",
         "Campus": "New York City"
     },
@@ -9499,7 +9521,7 @@ const data = [
         "Instructor": "Stroumbakis",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "5:45 PM",
-        "End_Time": "8:15 PM",
+        "End_Time": "8:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 207",
         "Campus": "New York City"
     },
@@ -9508,9 +9530,9 @@ const data = [
         "Class": "MATH 135 M05",
         "Course_Title": "Fundamentals of Precalculus I",
         "Instructor": "Yang",
-        "Date": "Monday, December 15, 2025",
-        "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "Date": "Wednesday, December 17, 2025",
+        "Start_Time": "11:15 AM",
+        "End_Time": "2:15 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 401",
         "Campus": "New York City"
     },
@@ -9521,7 +9543,7 @@ const data = [
         "Instructor": "Ly",
         "Date": "Monday, December 15, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "26 W. 61st St., Rm. 502",
         "Campus": "New York City"
     },
@@ -9533,7 +9555,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 307",
         "Campus": "Long Island"
     },
     {
@@ -9544,7 +9566,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 311",
         "Campus": "Long Island"
     },
     {
@@ -9566,7 +9588,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 316",
         "Campus": "Long Island"
     },
     {
@@ -9577,7 +9599,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 316",
         "Campus": "Long Island"
     },
     {
@@ -9588,7 +9610,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 311",
         "Campus": "Long Island"
     },
     {
@@ -9597,8 +9619,8 @@ const data = [
         "Course_Title": "Fundamentals of Precalculus II",
         "Instructor": "Bilsky-Bieniek",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "5:55 PM",
-        "End_Time": "8:25 PM",
+        "Start_Time": "6:15 PM",
+        "End_Time": "9:15 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 401",
         "Campus": "New York City"
     },
@@ -9610,7 +9632,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 309",
         "Campus": "Long Island"
     },
     {
@@ -9620,7 +9642,7 @@ const data = [
         "Instructor": "Yassiyevich",
         "Date": "Wednesday, December 17, 2025",
         "Start_Time": "5:45 PM",
-        "End_Time": "8:15 PM",
+        "End_Time": "8:45 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 405",
         "Campus": "New York City"
     },
@@ -9630,8 +9652,8 @@ const data = [
         "Course_Title": "Precalculus",
         "Instructor": "Bilsky-Bieniek",
         "Date": "Monday, December 15, 2025",
-        "Start_Time": "12:15 PM",
-        "End_Time": "2:45 PM",
+        "Start_Time": "12:00 PM",
+        "End_Time": "3:00 PM",
         "Building_&_Room": "16 W. 61st St., Rm. 624",
         "Campus": "New York City"
     },
@@ -9641,8 +9663,8 @@ const data = [
         "Course_Title": "Precalculus",
         "Instructor": "Ly",
         "Date": "Monday, December 15, 2025",
-        "Start_Time": "3:00 PM",
-        "End_Time": "5:30 PM",
+        "Start_Time": "3:30 PM",
+        "End_Time": "6:30 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 409",
         "Campus": "New York City"
     },
@@ -9653,7 +9675,7 @@ const data = [
         "Instructor": "Gopaul",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "26 W. 61st St., Rm. 409",
         "Campus": "New York City"
     },
@@ -9665,7 +9687,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 312",
         "Campus": "Long Island"
     },
     {
@@ -9687,7 +9709,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9697,7 +9719,7 @@ const data = [
         "Instructor": "Yang",
         "Date": "Monday, December 15, 2025",
         "Start_Time": "12:45 PM",
-        "End_Time": "3:15 PM",
+        "End_Time": "3:45 PM",
         "Building_&_Room": "16 W. 61st St., Rm. 721",
         "Campus": "New York City"
     },
@@ -9709,7 +9731,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 303",
         "Campus": "Long Island"
     },
     {
@@ -9718,7 +9740,7 @@ const data = [
         "Course_Title": "Basic Applied Calculus",
         "Instructor": "Ly",
         "Date": "Monday, December 15, 2025",
-        "Start_Time": "12:45 PM",
+        "Start_Time": "12:15 PM",
         "End_Time": "3:15 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 312",
         "Campus": "New York City"
@@ -9731,7 +9753,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -9741,7 +9763,7 @@ const data = [
         "Instructor": "Yassiyevich",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "12:45 PM",
-        "End_Time": "3:15 PM",
+        "End_Time": "3:45 PM",
         "Building_&_Room": "16 W. 61st St., Rm. 820",
         "Campus": "New York City"
     },
@@ -9752,7 +9774,7 @@ const data = [
         "Instructor": "Hofstrand",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "12:45 PM",
-        "End_Time": "3:15 PM",
+        "End_Time": "3:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 312",
         "Campus": "New York City"
     },
@@ -9762,7 +9784,7 @@ const data = [
         "Course_Title": "Calculus I",
         "Instructor": "Katsnelson",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "2:30 PM",
+        "Start_Time": "2:00 PM",
         "End_Time": "5:00 PM",
         "Building_&_Room": "16 W. 61st St., Rm. 822",
         "Campus": "New York City"
@@ -9774,7 +9796,7 @@ const data = [
         "Instructor": "Luo",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "16 W. 61st St., Rm. 721",
         "Campus": "New York City"
     },
@@ -9785,7 +9807,7 @@ const data = [
         "Instructor": "Luo",
         "Date": "Wednesday, December 17, 2025",
         "Start_Time": "5:45 PM",
-        "End_Time": "8:15 PM",
+        "End_Time": "8:45 PM",
         "Building_&_Room": "16 W. 61st St., Rm. 721",
         "Campus": "New York City"
     },
@@ -9795,7 +9817,7 @@ const data = [
         "Course_Title": "Calculus I",
         "Instructor": "Zweck",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "3:00 PM",
+        "Start_Time": "2:30 PM",
         "End_Time": "5:30 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 706",
         "Campus": "New York City"
@@ -9807,7 +9829,7 @@ const data = [
         "Instructor": "Shochat",
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "26 W. 61st St., Rm. 502",
         "Campus": "New York City"
     },
@@ -9819,7 +9841,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -9830,7 +9852,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -9841,7 +9863,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9863,7 +9885,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9874,7 +9896,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 301",
         "Campus": "Long Island"
     },
     {
@@ -9885,7 +9907,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 304",
         "Campus": "Long Island"
     },
     {
@@ -9896,7 +9918,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9905,8 +9927,8 @@ const data = [
         "Course_Title": "Calculus II",
         "Instructor": "Yassiyevich",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "3:00 PM",
-        "End_Time": "5:30 PM",
+        "Start_Time": "2:45 PM",
+        "End_Time": "5:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 312",
         "Campus": "New York City"
     },
@@ -9917,7 +9939,7 @@ const data = [
         "Instructor": "Luo",
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "5:30 PM",
-        "End_Time": "8:00 PM",
+        "End_Time": "8:30 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 401",
         "Campus": "New York City"
     },
@@ -9927,8 +9949,8 @@ const data = [
         "Course_Title": "Calculus II",
         "Instructor": "Gurtas",
         "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "3:00 PM",
-        "End_Time": "5:30 PM",
+        "Start_Time": "2:45 PM",
+        "End_Time": "5:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 313",
         "Campus": "New York City"
     },
@@ -9940,7 +9962,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -9951,7 +9973,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9961,7 +9983,7 @@ const data = [
         "Instructor": "Hofstrand",
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "5:45 PM",
-        "End_Time": "7:45 PM",
+        "End_Time": "8:45 PM",
         "Building_&_Room": "26 W. 61st St., Rm. 502",
         "Campus": "New York City"
     },
@@ -9973,7 +9995,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -9984,7 +10006,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 301",
         "Campus": "Long Island"
     },
     {
@@ -9994,7 +10016,7 @@ const data = [
         "Instructor": "Katsnelson",
         "Date": "Monday, December 15, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "16 W. 61st St., Rm. 820",
         "Campus": "New York City"
     },
@@ -10004,9 +10026,9 @@ const data = [
         "Course_Title": "Linear Algebra",
         "Instructor": "Luo",
         "Date": "Tuesday, December 16, 2025",
-        "Start_Time": "3:00 PM",
+        "Start_Time": "2:30 PM",
         "End_Time": "5:30 PM",
-        "Building_&_Room": "16 W. 61st St., Rm. 723",
+        "Building_&_Room": "16 W. 61st St., Rm. 820",
         "Campus": "New York City"
     },
     {
@@ -10017,7 +10039,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -10028,7 +10050,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 304",
         "Campus": "Long Island"
     },
     {
@@ -10038,7 +10060,7 @@ const data = [
         "Instructor": "Zweck",
         "Date": "Monday, December 15, 2025",
         "Start_Time": "8:15 AM",
-        "End_Time": "10:45 AM",
+        "End_Time": "11:15 AM",
         "Building_&_Room": "16 W. 61st St., Rm. 623",
         "Campus": "New York City"
     },
@@ -10050,7 +10072,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Riland Audirorium",
         "Campus": "Long Island"
     },
     {
@@ -10058,10 +10080,10 @@ const data = [
         "Class": "MATH 410 M01",
         "Course_Title": "Numerical Linear Algebra",
         "Instructor": "Katsnelson",
-        "Date": "Wednesday, December 17, 2025",
+        "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
-        "End_Time": "1:00 PM",
-        "Building_&_Room": "16 W. 61st St., Rm. 722",
+        "End_Time": "1:30 PM",
+        "Building_&_Room": "16 W. 61st St., Rm. 821",
         "Campus": "New York City"
     },
     {
@@ -10072,7 +10094,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -10080,9 +10102,9 @@ const data = [
         "Class": "MATH 455 M01",
         "Course_Title": "Numerical Analysis",
         "Instructor": "Wen",
-        "Date": "Wednesday, December 17, 2025",
-        "Start_Time": "12:15 PM",
-        "End_Time": "2:45 PM",
+        "Date": "Friday, December 19, 2025",
+        "Start_Time": "12:45 PM",
+        "End_Time": "4:45 PM",
         "Building_&_Room": "Guiliano Global Ctr., Rm. 406",
         "Campus": "New York City"
     },
@@ -10094,7 +10116,7 @@ const data = [
         "Date": "Tuesday, December 16, 2025",
         "Start_Time": "10:30 AM",
         "End_Time": "2:30 PM",
-        "Building_&_Room": "TBA",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 304",
         "Campus": "Long Island"
     },
     {
@@ -10160,7 +10182,7 @@ const data = [
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "12:45 PM",
         "End_Time": "2:45 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -10358,7 +10380,7 @@ const data = [
         "Date": "Thursday, December 18, 2025",
         "Start_Time": "12:45 PM",
         "End_Time": "2:45 PM",
-        "Building_&_Room": "Anna Rubin Hall, Rm. 308",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 308-310",
         "Campus": "Long Island"
     },
     {
@@ -12714,6 +12736,28 @@ const data = [
         "End_Time": "2:45 PM",
         "Building_&_Room": "Harry J. Schure Hall, Rm. 216A",
         "Campus": "Long Island"
+    },
+    {
+        "Session": "Fall 2025",
+        "Class": "MATH 220 W01",
+        "Course_Title": "Probability Theory",
+        "Instructor": "Jung",
+        "Date": "Tuesday, December 16, 2025",
+        "Start_Time": "10:30 AM",
+        "End_Time": "2:30 PM",
+        "Building_&_Room": "Anna Rubin Hall, Rm. 312",
+        "Campus": "Long Island"
+    },
+    {
+        "Session": "Fall 2025",
+        "Class": "MATH 220 M01",
+        "Course_Title": "Probability Theory",
+        "Instructor": "Jung",
+        "Date": "Tuesday, December 16, 2025",
+        "Start_Time": "10:30 AM",
+        "End_Time": "1:30 PM",
+        "Building_&_Room": "16 W. 61st St., Rm. 821",
+        "Campus": "New York City"
     }
 ]
 
