@@ -2,7 +2,7 @@ import data from "./data"; // Correct way to import default export
 
 const CACHE_KEY = "sampleDataCache";
 const CACHE_TIMESTAMP_KEY = "sampleDataCacheTimestamp";
-const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+const CACHE_EXPIRATION_MS =  60 * 60 * 1000; // 24 hours in milliseconds
 
 export const getCachedData = () => {
   const cachedData = localStorage.getItem(CACHE_KEY);
